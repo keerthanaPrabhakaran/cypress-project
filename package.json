@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "caniuse-lite": "^1.0.30001488",
     "cypress": "^9.6.1"
   },
   "devDependencies": {
