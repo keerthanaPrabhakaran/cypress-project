@@ -13,9 +13,9 @@
   "scripts": {
     "test": "test",
     "cypress:open": "cypress open",
-    "cypress:runDefault": "npx cypress run --spec cypress/integration/Build-Verification-Test/**/*.spec.js",
-    "cypress:chrome": "npx cypress run --browser chrome cypress/integration/Build-Verification-Test/**/*.spec.js",
-    "cypress:edge": "npx cypress run --browser edge cypress/integration/Build-Verification-Test/**/*.spec.js"
+    "cypress:runDefault": "npx cypress run --spec 'cypress/integration/Build-Verification-Test/**/*.spec.js'",
+    "cypress:chrome": "npx cypress run --browser chrome 'cypress/integration/Build-Verification-Test/**/*.spec.js'",
+    "cypress:edge": "npx cypress run --browser edge 'cypress/integration/Build-Verification-Test/**/*.spec.js'"
   },
   "repository": {
     "type": "git",
