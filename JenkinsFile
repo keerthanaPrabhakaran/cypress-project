@@ -1,23 +1,20 @@
 pipeline {
-   agent any
+  agent {
+    docker {
+      image 'cypress/base:18.14.1'
+    }
+  }
 
-   tools {nodejs "Node"}
+  stages {
+    stage('build and test') {
+      environment {
+        CYPRESS_RECORD_KEY = credentials('58bf140b-69b0-4d2e-97c4-8785eb8e135e')
+      }
 
-   stages {
-       stage('Dependencies') {
-           steps {
-               sh 'npm i'
-           }
-       }
-       stage('e2e Tests') {
-           steps {
-               sh 'npm run cypress'
-           }
-       }
-       stage('Deploy') {
-           steps {
-               echo 'Deploying....'
-           }
-       }
-   }
+      steps {
+        sh 'npm ci'
+        sh "npm run test:ci:record"
+      }
+    }
+  }
 }
