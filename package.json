@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "caniuse-lite": "^1.0.30001488",
-    "cypress": "^9.6.1"
+    "caniuse-lite": "^1.0.30001488"
   },
   "devDependencies": {
     "eslint-plugin-cypress": "^2.13.3"
@@ -13,6 +12,7 @@
   "scripts": {
     "test": "test",
     "cypress:open": "cypress open",
+    "cy:run": "DEBUG=cypress:* cypress run --config video=false --headless",
     "cypress:runDefault": "npx cypress run --spec 'cypress/integration/Build-Verification-Test/**/*.spec.js'",
     "cypress:chrome": "npx cypress run --browser chrome 'cypress/integration/Build-Verification-Test/**/*.spec.js'",
     "cypress:edge": "npx cypress run --browser edge 'cypress/integration/Build-Verification-Test/**/*.spec.js'"
