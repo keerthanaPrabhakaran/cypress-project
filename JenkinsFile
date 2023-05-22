@@ -4,7 +4,12 @@ pipeline {
       image 'cypress/base:18.14.1'
     }
   }
-
+  options {
+    ansiColor('xterm') {
+      echo "TERM=${env.TERM}"
+      // prints out TERM=xterm
+    }
+  }
   stages {
     stage('build and test') {
       environment {

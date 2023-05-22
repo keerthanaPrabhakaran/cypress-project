@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
-const user_id         = '8778299972';
-const invalid_user_id = '@#!$$%#$%$';
-const user_passw      = 'keerthu@09';
-const invalid_passw   = '#@$%^&^%';
-const active_url      = 'https://www.amazon.in';  // read README.md for correct initialization
+const user_id         = Cypress.env('USER_ID');
+const invalid_user_id = Cypress.env('INVALID_USER_ID');
+const user_passw      = Cypress.env('USER_PASSW');
+const invalid_passw   = Cypress.env('INVALID_USER_PASSW');
+const active_url      = Cypress.env('ACTIVE_URL');  // read README.md for correct initialization
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   console.log(err)
