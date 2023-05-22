@@ -26,10 +26,12 @@ context('Navigation Bar Validation', () => {
   })
 
   it('Can check amazon logo exist', () => {
-    cy.get('a.nav-logo-sprites')
+    cy.get('a#nav-logo-sprites')
       .should('be.visible')
 
-    cy.get('a.nav-logo-sprites')
+    cy.get('.nav-left')
+      .first()
+      .find('a#nav-logo-sprites')
       .should('have.attr', 'aria-label', 'amazon.in')
   })
   it('Can verify location exist', () => {
